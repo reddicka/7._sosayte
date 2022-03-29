@@ -1,5 +1,5 @@
 /* =============================== Resets =============================== */
-body, ul, li, a {
+body, ul, li, a, p {
     padding: 0;
     margin: 0;
 }
@@ -14,35 +14,39 @@ body {
     background: url('./img/general/background.png') no-repeat;
     background-size: cover;
     color: white;
-    font-size: 1.2em;
-    line-height: 1.2em;
-    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    font-weight: 400;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+}
 
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+
+    border: 5px solid red;
 }
 
 .main-template {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
     padding: 10px 0;
-}
-
-.container {
-    max-width: 1500px;
-    margin: 0 auto;
 }
 
 /* === ЗАТЕНЯШКИ ФОНА БЛОКОВ === */
 .page-nav,
 .page-main,
 .page-aside {
-    border: 2px solid rgb(0, 0, 0);
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
     padding: 25px 15px;
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
+
+    box-sizing: border-box;
 }
 
 a {
@@ -56,45 +60,111 @@ a:hover {
     color: rgb(158, 158, 158);
 }
 
-/* =============================== Header =============================== */
-
-.page-header {
-    background-color: rgb(14, 14, 14);
-}
-
-.header-row {
-    display: flex;
-    justify-content: space-between;
-}
-
 /* =============================== Nav =============================== */
 
 .page-nav {
     min-width: 300px;
 }
 
+.menu-top,
+.menu-general,
+.menu-secondary {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid white;
+}
+
+.menu-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.menu-theme {
+    display: inline-block;
+}
+
+.menu-logo {
+    font-size: 1.8em;
+    display: inline-block;
+}
+
+.menu-general,
+.menu-secondary {
+    padding: 15px 0;
+}
+
+.menu-secondary-search {
+    padding-left: 25px;
+}
+
+.menu-profile {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.menu-profile p {
+    padding-left: 70px;
+}
+
+.menu-profile img {
+    position: absolute;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.menu-profile-name {
+    padding-top: 10px;
+}
+
+.nav-bar a {
+    display: block;
+    padding: 10px;
+    padding-left: 25px;
+    
+}
+
 /* =============================== Main =============================== */
 
 .page-main {
-    margin: 0 15px;
-
+    flex-grow: 1;
+    margin: 0 10px;
     min-width: 350px;
 }
 
-.page-main {
-    min-width: 350px;
+.content-card {
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin-bottom: 15px;
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    /*backdrop-filter: blur(10px);*/
+}
+
+.content-source {
+    margin-bottom: 15px; /* Изменится когда добавится лого группы, ссылка */
+}
+
+.content-picture {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.content-text {
+    margin-bottom: 15px;
+}
+
+.buttons-likes-views-reposts p {
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
 /* =============================== Aside =============================== */
 
 .page-aside {
-    min-width: 150px;
-}
-
-/* =============================== Footer =============================== */
-
-.page-footer {
-    background-color: rgb(14, 14, 14);
-
-    margin-top: auto;
+    min-width: 250px;
 }
